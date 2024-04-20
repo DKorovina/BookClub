@@ -1,0 +1,259 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<View
+		android:id="@+id/_bg__main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/_bg__main_shape" />
+
+	<ScrollView android:id="@+id/club_main"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/rectangle_1">
+
+		<RelativeLayout android:id="@+id/content_container"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView android:id="@+id/_________"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:textColor="@color/__________color"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="15dp"
+				android:text="Мои клубы"
+				/>
+
+			<View
+				android:id="@+id/rectangle_21"
+				android:layout_width="wrap_content"
+				android:layout_height="105dp"
+				android:layout_below="@+id/_________"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginEnd="10dp"
+				android:layout_marginBottom="10dp"
+				android:alpha="0.5"
+				android:background="@drawable/rectangle_21_shape" />
+
+			<TextView
+				android:id="@+id/______________ek1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/rectangle_21"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_toEndOf="@+id/rectangle_24"
+				android:text="Дарк академии"
+				android:textColor="@color/rectangle_2_color"
+				android:textSize="18sp" />
+
+			<TextView
+				android:id="@+id/__________ek1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/rectangle_21"
+				android:layout_marginTop="15dp"
+				android:text="Все клубы"
+				android:textColor="@color/__________ek1_color"
+				android:textSize="14sp" />
+
+			<ImageView
+				android:id="@+id/line_20"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/__________ek1"
+				android:layout_marginTop="5dp"
+				android:contentDescription="line_20"
+				android:src="@drawable/line_20" />
+
+			<TextView
+				android:id="@+id/________________"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/line_20"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="15dp"
+				android:text="Популярные клубы"
+				android:textColor="@color/__________color"
+				android:textSize="18sp" />
+
+			<TextView
+				android:id="@+id/__________ek2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/rectangle_26"
+				android:layout_marginTop="15dp"
+				android:text="Все клубы"
+				android:textColor="@color/__________ek1_color"
+				android:textSize="14sp" />
+
+			<View
+				android:id="@+id/rectangle_26"
+				android:layout_width="wrap_content"
+				android:layout_height="105dp"
+				android:layout_below="@+id/________________"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="17dp"
+				android:layout_marginEnd="15dp"
+				android:layout_marginBottom="15dp"
+				android:alpha="0.43999999761581"
+				android:background="@drawable/rectangle_26_shape" />
+
+			<TextView
+				android:id="@+id/_________________ek1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignTop="@+id/rectangle_26"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_toEndOf="@+id/rectangle_27"
+				android:text="Русская классика"
+				android:textColor="@color/rectangle_2_color"
+				android:textSize="18sp" />
+
+			<ImageView
+				android:id="@+id/rectangle_27"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignStart="@+id/rectangle_26"
+				android:layout_alignTop="@+id/rectangle_26"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:contentDescription="rectangle_27"
+				android:src="@drawable/rectangle_27" />
+
+			<ImageView
+				android:id="@+id/line_21"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/__________ek2"
+				android:layout_marginTop="5dp"
+				android:contentDescription="line_21"
+				android:src="@drawable/line_21" />
+
+			<View
+				android:id="@+id/_bg__group_21_ek1"
+				android:layout_width="354dp"
+				android:layout_height="105dp"
+				android:layout_marginStart="-3dp"
+				android:layout_marginTop="-319dp"
+				android:background="@drawable/_bg__group_21_ek1_shape" />
+
+			<View
+				android:id="@+id/_bg________ek1"
+				android:layout_width="360dp"
+				android:layout_height="68dp"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="-732dp"
+				android:background="@drawable/_bg________ek1_shape" />
+
+			<ImageView
+				android:id="@+id/rectangle_24"
+				android:layout_width="68dp"
+				android:layout_height="105dp"
+				android:layout_alignStart="@+id/rectangle_21"
+				android:layout_alignTop="@+id/rectangle_21"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:contentDescription="rectangle_24"
+				android:src="@drawable/rectangle_24" />
+
+
+		</RelativeLayout>
+
+	</ScrollView>
+	<View
+		android:id="@+id/rectangle_1"
+		android:layout_width="match_parent"
+		android:layout_height="68dp"
+		android:background="@drawable/rectangle_1_shape"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/____________________"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="22dp"
+		android:text="Книжные клубы"
+		android:textColor="@color/_____________________color"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	<ImageView
+		android:id="@+id/sourchicon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_marginTop="22dp"
+		android:layout_marginEnd="16dp"
+		android:src="@drawable/poisk"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<ImageView
+		android:id="@+id/sozdaticon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:src="@drawable/sozdat"
+		android:layout_marginTop="24dp"
+		android:layout_marginEnd="60dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		/>
+
+	<View
+		android:id="@+id/rectangle_2"
+		android:layout_width="match_parent"
+		android:layout_height="68dp"
+		android:background="@drawable/rectangle_2_shape"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+	<ImageView
+		android:id="@+id/mainvicon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:src="@drawable/mainv"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+	<ImageView
+		android:id="@+id/profilicon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:src="@drawable/profil"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+	<ImageView
+		android:id="@+id/polkiicon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:src="@drawable/polki"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+	<ImageView
+		android:id="@+id/clubicon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:src="@drawable/club"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+		tools:layout_editor_absoluteX="7dp"
+		tools:layout_editor_absoluteY="24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

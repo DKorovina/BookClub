@@ -1,0 +1,203 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/_bg__main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/_bg__main_shape" />
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectangle_1">
+
+        <RelativeLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/rectangle_9"
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:alpha="0.5"
+                android:background="@drawable/rectangle_21_shape" />
+
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rectangle_9"
+                android:layout_alignEnd="@+id/rectangle_9"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="image_1"
+                android:src="@drawable/image_1" />
+
+            <TextView
+                android:id="@+id/statia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/rectangle_9"
+                android:layout_alignTop="@+id/rectangle_9"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/image_1"
+                android:text="Гарри Поттер учится балету с Малфоем "
+                android:textColor="@color/_________________________color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/___________________________________________________________________________________________________________________________"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statia"
+                android:layout_alignStart="@+id/rectangle_9"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/image_1"
+                android:text="Сегодня Гарри Поттер и Драко Малфой раскрыли свой секрет. Кто бы знал, что они такие!!! Тра-ля-ля, бла-бла-бла, пу-пу-пуанты."
+                android:textColor="@color/____________________________________________________________________________________________________________________________color" />
+
+            <TextView
+                android:id="@+id/_3333_______"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/___________________________________________________________________________________________________________________________"
+                android:layout_alignStart="@+id/rectangle_9"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="3333 лайков"
+                android:textColor="@color/_3333________color"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/rectangle_1_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/reqomend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toStartOf="@+id/sourchicon"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:background="@null"
+            android:text="Новости"
+            android:textColor="@color/_bg__main_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/citata"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:background="@null"
+            android:text="Цитаты"
+            android:textColor="@color/_bg__main_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/recnz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:background="@null"
+            android:text="Рецензии"
+            android:textColor="@color/_bg__main_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/sourchicon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/poisk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/rectangle_2_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mainvicon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/mainv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+    <ImageView
+        android:id="@+id/profilicon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/profil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+    <ImageView
+        android:id="@+id/polkiicon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/polki"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+    <ImageView
+        android:id="@+id/clubicon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/club"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

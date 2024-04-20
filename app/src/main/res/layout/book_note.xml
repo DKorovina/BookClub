@@ -1,0 +1,303 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+
+	<View
+		android:id="@+id/_bg__book_note"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/_bg__book_note_shape"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<ScrollView
+		android:id="@+id/book_note"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintTop_toBottomOf="@id/rectangle_1"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent">
+
+		<RelativeLayout
+			android:id="@+id/content_container"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:id="@+id/rectangle_23"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:contentDescription="rectangle_23"
+				android:src="@drawable/rectangle_23"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<Button
+				android:id="@+id/chooseImageButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/rectangle_23"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:background="@drawable/rectangle_16_shape"
+				android:text="Выбрать фото"
+				android:textSize="13sp"
+				android:textColor="@color/_____color"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/rectangle_23" />
+
+			<EditText
+				android:id="@+id/booktitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_toEndOf="@+id/rectangle_23"
+				android:textSize="13sp"
+				android:hint="Название:" />
+
+			<EditText
+				android:id="@+id/bookauthor"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/booktitle"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_toEndOf="@+id/rectangle_23"
+				android:textSize="13sp"
+				android:hint="Автор:" />
+
+			<EditText
+				android:id="@+id/bookgenre"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/bookauthor"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_toEndOf="@+id/rectangle_23"
+				android:textSize="13sp"
+				android:hint="Жанры:" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/bookgenre"
+				android:layout_toEndOf="@+id/rectangle_23"
+				android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/bookdatastart"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_weight="1"
+				android:textSize="13sp"
+				android:hint="Начало прочтения:"
+				android:inputType="date" />
+
+			<EditText
+				android:id="@+id/bookdataend"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_weight="1"
+				android:textSize="13sp"
+				android:hint="Конец прочтения:"
+				android:inputType="date" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/reqomend"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/chooseImageButton"
+				android:layout_marginTop="15dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/questionTextView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:text="Рекомендуете книгу?"
+					android:textSize="16sp" />
+
+				<RadioGroup
+					android:id="@+id/answerRadioGroup"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="15dp"
+					android:orientation="horizontal">
+
+					<RadioButton
+						android:id="@+id/yesRadioButton"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Да" />
+
+					<RadioButton
+						android:id="@+id/noRadioButton"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Нет" />
+				</RadioGroup>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_toEndOf="@+id/reqomend"
+				android:layout_below="@+id/chooseImageButton"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/ocenca"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="15dp"
+					android:text="Оценка:"
+					android:textSize="16sp" />
+
+				<RatingBar
+					android:id="@+id/bookRatingBar"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="5dp"
+					android:numStars="5"
+					android:rating="0"
+					android:stepSize="1" />
+			</LinearLayout>
+
+			<EditText
+				android:id="@+id/bookcitata"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_below="@+id/reqomend"
+				android:hint="Любимые цитаты:"
+				android:textSize="13sp" />
+
+			<EditText
+				android:id="@+id/bookpers"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_below="@+id/bookcitata"
+				android:hint="Любимые персонажи:"
+				android:textSize="13sp" />
+
+			<EditText
+				android:id="@+id/bookscena"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_below="@+id/bookpers"
+				android:hint="Любимые сцены:"
+				android:textSize="13sp" />
+
+			<EditText
+				android:id="@+id/bookglava"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_below="@+id/bookscena"
+				android:hint="Любимые главы:"
+				android:textSize="13sp" />
+
+			<EditText
+				android:id="@+id/bookgzametki"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_below="@+id/bookglava"
+				android:hint="Заметки:"
+				android:textSize="13sp" />
+			<EditText
+				android:id="@+id/bookchuvstva"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="15dp"
+				android:layout_marginEnd="15dp"
+				android:layout_below="@+id/bookgzametki"
+				android:hint="Краткое описание сюжета:"
+				android:textSize="13sp" />
+
+			<RelativeLayout
+				android:id="@+id/_____"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="732dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+
+
+			</RelativeLayout>
+		</RelativeLayout>
+	</ScrollView>
+	<View
+		android:id="@+id/rectangle_1"
+		android:layout_width="match_parent"
+		android:layout_height="68dp"
+		android:background="@drawable/rectangle_1_shape"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/____________________"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="22dp"
+		android:text="Читательский дневник"
+		android:textColor="@color/_____________________color"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/sozdaticon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:src="@drawable/sozdat"
+		android:layout_marginTop="24dp"
+		android:layout_marginEnd="60dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		/>
+
+	<View
+		android:id="@+id/rectangle_2"
+		android:layout_width="match_parent"
+		android:layout_height="68dp"
+		android:background="@drawable/rectangle_2_shape"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

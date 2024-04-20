@@ -1,0 +1,36 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main">
+
+    <activity
+        android:id="@+id/main"
+        android:name="com.example.myapplication.main_activity"
+        android:label="Main Activity">
+        <action
+            android:id="@+id/action_mainActivity_to_profileActivity"
+            app:destination="@id/profil" />
+        <action
+            android:id="@+id/action_mainActivity_to_libraryActivity"
+            app:destination="@id/librery" />
+        <action
+            android:id="@+id/action_mainActivity_to_clubActivity"
+            app:destination="@id/club_main" />
+    </activity>
+
+    <activity
+        android:id="@+id/profil"
+        android:name="com.example.myapplication.profil_activity"
+        android:label="Profile Activity" />
+
+    <activity
+        android:id="@+id/librery"
+        android:name="com.example.myapplication.librery_activity"
+        android:label="Library Activity" />
+
+    <activity
+        android:id="@+id/club_main"
+        android:name="com.example.myapplication.club_main_activity"
+        android:label="Club Activity" />
+
+</navigation>

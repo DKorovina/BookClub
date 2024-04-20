@@ -1,0 +1,130 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<View
+		android:id="@+id/_bg__club"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/_bg__main_shape" />
+
+	<ScrollView android:id="@+id/club"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/rectangle_1">
+
+		<RelativeLayout android:id="@+id/content_container" 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" >
+
+			<ImageView
+				android:id="@+id/rectangle_23"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:contentDescription="rectangle_23"
+				android:src="@drawable/rectangle_23"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+
+			<View
+				android:id="@+id/rectangle_26"
+				android:layout_width="wrap_content"
+				android:layout_height="158dp"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginEnd="15dp"
+				android:alpha="0.5"
+				android:layout_toEndOf="@+id/rectangle_23"
+				android:background="@drawable/rectangle_26_shape" />
+
+			<TextView
+				android:id="@+id/__________________"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignStart="@+id/rectangle_26"
+				android:layout_alignTop="@+id/rectangle_26"
+				android:layout_marginStart="15dp"
+				android:layout_marginTop="15dp"
+				android:text="Информация о клубе"
+				android:textColor="@color/rectangle_2_color"
+				android:textSize="15sp" />
+
+			<ImageView
+				android:id="@+id/line_2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@+id/rectangle_26"
+				android:layout_marginTop="15dp"
+				android:contentDescription="line_2"
+				android:src="@drawable/line_2" />
+
+			<TextView
+				android:id="@+id/_________________________________________________"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/line_2"
+				android:layout_marginLeft="15dp"
+				android:layout_marginTop="15dp"
+				android:text="Материалы добавленные в тезис во время опсуждений"
+				android:textColor="@color/rectangle_2_color"
+				android:textSize="15sp" />
+		</RelativeLayout>
+	</ScrollView>
+
+	<View
+		android:id="@+id/rectangle_1"
+		android:layout_width="match_parent"
+		android:layout_height="68dp"
+		android:background="@drawable/rectangle_1_shape"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/____________________"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="22dp"
+		android:text="Дарк академии"
+		android:textColor="@color/_____________________color"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/dobawiticon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_marginTop="22dp"
+		android:layout_marginEnd="85dp"
+		android:src="@drawable/dobavit"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/chaticon"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_marginTop="22dp"
+		android:layout_marginEnd="22dp"
+		android:src="@drawable/chat"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+		android:id="@+id/rectangle_2"
+		android:layout_width="match_parent"
+		android:layout_height="68dp"
+		android:background="@drawable/rectangle_2_shape"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

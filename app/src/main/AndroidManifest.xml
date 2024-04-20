@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.example.myapplication" >
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	
+
+	<application
+		android:allowBackup="true"
+		android:theme="@style/AppTheme"
+		android:icon="@drawable/logo"
+		android:label="@string/app_name" >
+		<activity
+		android:name=".reader_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".________________________activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".____________activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".user_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".club_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".book_note_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".profil_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".main_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+		<activity
+			android:name=".main_citata_activity"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:label="@string/app_name"
+			android:exported="true"  >
+
+		</activity>
+		<activity
+			android:name=".main_recenz_activity"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:label="@string/app_name"
+			android:exported="true"  >
+
+		</activity>
+
+<activity
+		android:name=".librery_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+<activity
+		android:name=".info_book_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+		<activity
+			android:name=".enter_activity"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:label="@string/app_name"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+<activity
+		android:name=".club_main_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+
+<activity
+		android:name=".article_activity"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+		android:label="@string/app_name"
+		android:exported="true"  >
+
+		</activity>
+	</application>
+
+</manifest>
+	
+	
