@@ -1,23 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <!-- Контейнер для отображения текущей активности или фрагмента -->
-    <FrameLayout
-        android:id="@+id/container"
+    <!-- Основное содержимое вашего layout -->
+
+    <LinearLayout
+        android:id="@+id/navigation_linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/_bg______________color"
+        android:orientation="horizontal">
 
-    <!-- Нижняя панель навигации -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_nav_menu" />
+        <ImageButton
+            android:id="@+id/navigation_page1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop = "6dp"
+            android:src="@drawable/main"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+             />
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/navigation_page2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop = "6dp"
+            android:src="@drawable/profil"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/navigation_page3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop = "6dp"
+            android:src="@drawable/polki"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+             />
+
+        <ImageButton
+            android:id="@+id/navigation_page4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop = "6dp"
+            android:src="@drawable/club"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

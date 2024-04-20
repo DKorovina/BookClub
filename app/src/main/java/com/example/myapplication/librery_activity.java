@@ -18,9 +18,11 @@
 package com.example.myapplication;
 
 	import android.app.Activity;
+	import android.content.Intent;
 	import android.os.Bundle;
 	import android.view.View;
 	import android.widget.Button;
+	import android.widget.ImageButton;
 	import android.widget.ImageView;
 	import android.widget.TextView;
 
@@ -61,6 +63,10 @@ public class librery_activity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.librery);
+		Button book_note_button = findViewById(R.id.book_note_button);
+		ImageButton navigation_page1 = findViewById(R.id.navigation_page1);
+		ImageButton navigation_page2 = findViewById(R.id.navigation_page2);
+		ImageButton navigation_page4 = findViewById(R.id.navigation_page4);
 
 		
 
@@ -89,6 +95,52 @@ public class librery_activity extends Activity {
 	
 		
 		//custom code goes here
+
+		book_note_button.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(librery_activity.this, book_note_activity.class);
+
+				startActivity(intent);
+
+
+			}
+		});
+		navigation_page1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(librery_activity.this, main_activity.class);
+
+				startActivity(intent);
+				navigation_page1.setImageResource(R.drawable.mainv);
+
+			}
+		});
+		navigation_page2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(librery_activity.this, profil_activity.class);
+
+				startActivity(intent);
+				navigation_page2.setImageResource(R.drawable.profilv);
+
+			}
+		});
+		navigation_page4.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(librery_activity.this, club_main_activity.class);
+
+				startActivity(intent);
+				navigation_page4.setImageResource(R.drawable.clubv);
+
+			}
+		});
+
 		Button tab1Button = findViewById(R.id.tab1_button);
 		Button tab2Button = findViewById(R.id.tab2_button);
 
@@ -110,13 +162,12 @@ public class librery_activity extends Activity {
 		});
 	}
 
-	// Метод для переключения на первую вкладку
+
 	private void selectTab1() {
 		findViewById(R.id.tab1Content).setVisibility(View.VISIBLE);
 		findViewById(R.id.tab2Content).setVisibility(View.GONE);
 	}
 
-	// Метод для переключения на вторую вкладку
 	private void selectTab2() {
 		findViewById(R.id.tab1Content).setVisibility(View.GONE);
 		findViewById(R.id.tab2Content).setVisibility(View.VISIBLE);

@@ -162,14 +162,56 @@
 		app:layout_constraintTop_toTopOf="parent"
 		/>
 
-	<View
-		android:id="@+id/rectangle_2"
+	<LinearLayout
+		android:id="@+id/navigation_linear_layout"
 		android:layout_width="match_parent"
 		android:layout_height="68dp"
-		android:background="@drawable/rectangle_2_shape"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		android:layout_alignParentBottom="true"
+		android:background="@color/_bg______________color"
+		android:orientation="horizontal"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+		<ImageButton
+			android:id="@+id/navigation_page1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/main" />
+
+		<ImageButton
+			android:id="@+id/navigation_page2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/profil" />
+
+		<ImageButton
+			android:id="@+id/navigation_page3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/polki" />
+
+		<ImageButton
+			android:id="@+id/navigation_page4"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/club" />
+
+	</LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

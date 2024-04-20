@@ -96,6 +96,7 @@
 				android:text="50%"
 				android:textColor="@color/______ek2_color"
 				android:textSize="14sp" />
+
 			</RelativeLayout>
 
 			<Button
@@ -291,7 +292,7 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<Button
-		android:id="@+id/rectangle_26"
+		android:id="@+id/book_note_button"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="15dp"
@@ -303,50 +304,57 @@
 		app:layout_constraintStart_toStartOf="@+id/rectangle_1"
 		app:layout_constraintTop_toTopOf="@+id/_bg__book_note" />
 
-	<View
-		android:id="@+id/rectangle_2"
+
+	<LinearLayout
+		android:id="@+id/navigation_linear_layout"
 		android:layout_width="match_parent"
 		android:layout_height="68dp"
-		android:background="@drawable/rectangle_2_shape"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
-	<ImageView
-		android:id="@+id/mainvicon"
-		android:layout_width="wrap_content"
-		android:layout_height="match_parent"
-		android:src="@drawable/main"
-		android:layout_marginStart="21dp"
-		android:layout_marginTop="738dp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"/>
-	<ImageView
-		android:id="@+id/profilicon"
-		android:layout_width="wrap_content"
-		android:layout_height="match_parent"
-		android:src="@drawable/profil"
-		android:layout_marginStart="109dp"
-		android:layout_marginTop="738dp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"/>
-	<ImageView
-		android:id="@+id/polkiicon"
-		android:layout_width="wrap_content"
-		android:layout_height="match_parent"
-		android:src="@drawable/polkiv"
-		android:layout_marginStart="192dp"
-		android:layout_marginTop="738dp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"/>
-	<ImageView
-		android:id="@+id/clubicon"
-		android:layout_width="wrap_content"
-		android:layout_height="match_parent"
-		android:src="@drawable/club"
-		android:layout_marginStart="294dp"
-		android:layout_marginTop="738dp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"/>
+		android:layout_alignParentBottom="true"
+		android:background="@color/_bg______________color"
+		android:orientation="horizontal"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+		<ImageButton
+			android:id="@+id/navigation_page1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/main" />
+
+		<ImageButton
+			android:id="@+id/navigation_page2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/profil" />
+
+		<ImageButton
+			android:id="@+id/navigation_page3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/polkiv" />
+
+		<ImageButton
+			android:id="@+id/navigation_page4"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:src="@drawable/club" />
+
+	</LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

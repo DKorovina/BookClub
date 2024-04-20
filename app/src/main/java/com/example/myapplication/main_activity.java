@@ -22,13 +22,11 @@ package com.example.myapplication;
 	import android.os.Bundle;
 	import android.view.View;
 	import android.widget.Button;
+	import android.widget.ImageButton;
 	import android.widget.ImageView;
 	import android.widget.TextView;
-	import com.example.myapplication.R;
 
 	import androidx.navigation.NavController;
-
-	import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 	public class main_activity extends Activity {
 
@@ -75,6 +73,9 @@ package com.example.myapplication;
 		TextView statia = findViewById(R.id.statia);
 		Button citata = findViewById(R.id.citata);
 		Button recnz = findViewById(R.id.recnz);
+		ImageButton navigation_page2 = findViewById((R.id.navigation_page2));
+		ImageButton navigation_page3 = findViewById((R.id.navigation_page3));
+		ImageButton navigation_page4 = findViewById((R.id.navigation_page4));
 
 		
 		_bg__main = (View) findViewById(R.id._bg__main);
@@ -111,6 +112,39 @@ package com.example.myapplication;
 				Intent intent = new Intent(main_activity.this, main_recenz_activity.class);
 
 				startActivity(intent);
+
+			}
+		});
+		navigation_page2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(main_activity.this, profil_activity.class);
+
+				startActivity(intent);
+				navigation_page2.setImageResource(R.drawable.profilv);
+
+			}
+		});
+		navigation_page3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(main_activity.this, librery_activity.class);
+
+				startActivity(intent);
+				navigation_page3.setImageResource(R.drawable.polkiv);
+
+			}
+		});
+		navigation_page4.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(main_activity.this, club_main_activity.class);
+
+				startActivity(intent);
+				navigation_page4.setImageResource(R.drawable.clubv);
 
 			}
 		});

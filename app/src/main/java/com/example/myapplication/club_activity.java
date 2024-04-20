@@ -18,10 +18,12 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.ImageView;
 
@@ -61,6 +63,7 @@ public class club_activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.club);
 
+
 		
 		_bg__club = (View) findViewById(R.id._bg__club);
 		_bg________ek1 = (View) findViewById(R.id._bg________ek1);
@@ -82,7 +85,8 @@ public class club_activity extends Activity {
 	
 		
 		//custom code goes here
-	
+
+
 	}
 }
 	

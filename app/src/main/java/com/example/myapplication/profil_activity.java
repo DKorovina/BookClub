@@ -18,10 +18,12 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,6 +55,9 @@ public class profil_activity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.profil);
+		ImageButton navigation_page1 = findViewById(R.id.navigation_page1);
+		ImageButton navigation_page3 = findViewById(R.id.navigation_page3);
+		ImageButton navigation_page4 = findViewById(R.id.navigation_page4);
 
 		
 
@@ -76,7 +81,39 @@ public class profil_activity extends Activity {
 	
 		
 		//custom code goes here
-	
+		navigation_page1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(profil_activity.this, main_activity.class);
+
+				startActivity(intent);
+				navigation_page1.setImageResource(R.drawable.mainv);
+
+			}
+		});
+		navigation_page3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(profil_activity.this, librery_activity.class);
+
+				startActivity(intent);
+				navigation_page3.setImageResource(R.drawable.polkiv);
+
+			}
+		});
+		navigation_page4.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(profil_activity.this, club_main_activity.class);
+
+				startActivity(intent);
+				navigation_page4.setImageResource(R.drawable.clubv);
+
+			}
+		});
 	}
 }
 	
