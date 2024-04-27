@@ -20,10 +20,20 @@ package com.example.myapplication;
 	import android.app.Activity;
 	import android.content.Intent;
 	import android.os.Bundle;
+	import android.util.Patterns;
 	import android.view.View;
 	import android.widget.Button;
+	import android.widget.EditText;
 	import android.widget.ImageView;
 	import android.widget.TextView;
+	import android.widget.Toast;
+
+	import androidx.annotation.NonNull;
+
+	import com.google.android.gms.tasks.OnFailureListener;
+	import com.google.android.gms.tasks.OnSuccessListener;
+	import com.google.firebase.auth.AuthResult;
+	import com.google.firebase.auth.FirebaseAuth;
 
 public class ____________activity extends Activity {
 
@@ -62,6 +72,9 @@ public class ____________activity extends Activity {
 	private TextView _______________;
 	private TextView ____________ek1;
 	private TextView _______;
+	private Button button, regbutt;
+	private EditText emailedt, passwordedt;
+	private FirebaseAuth auth;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -71,16 +84,15 @@ public class ____________activity extends Activity {
 
 		Button button = findViewById(R.id.button);
 		Button regbutt = findViewById(R.id.regbutt);
+		emailedt = findViewById(R.id.email);
+		passwordedt = findViewById(R.id.password);
+
+		auth = FirebaseAuth.getInstance();
+
 
 		_bg_____________ = (View) findViewById(R.id._bg_____________);
-
 		___________ = (TextView) findViewById(R.id.___________);
-		rectangle_13 = (View) findViewById(R.id.rectangle_13);
-		rectangle_14 = (View) findViewById(R.id.rectangle_14);
-
-
 		_______________ = (TextView) findViewById(R.id._______________);
-
 		_______ = (TextView) findViewById(R.id._______);
 	
 		
@@ -89,9 +101,33 @@ public class ____________activity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				Intent intent = new Intent(____________activity.this, main_activity.class);
+				String email = emailedt.getText().toString();
+				String password = passwordedt.getText().toString();
 
-				startActivity(intent);
+				if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+					if (!password.isEmpty()) {
+						auth.signInWithEmailAndPassword(email, password)
+								.addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+									@Override
+									public void onSuccess(AuthResult authResult) {
+										Toast.makeText(____________activity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+										startActivity(new Intent(____________activity.this, main_activity.class));
+										finish();
+									}
+								}).addOnFailureListener(new OnFailureListener() {
+									@Override
+									public void onFailure(@NonNull Exception e) {
+										Toast.makeText(____________activity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+									}
+								});
+					} else {
+						passwordedt.setError("Empty fields are not allowed");
+					}
+				} else if (email.isEmpty()) {
+					emailedt.setError("Empty fields are not allowed");
+				} else {
+					emailedt.setError("Please enter correct email");
+				}
 			}
 		});
 

@@ -66,7 +66,7 @@ public class enter_activity extends Activity {
 
 				Intent intent = new Intent(enter_activity.this, ____________activity.class);
 				startActivity(intent);
-				finish(); // Закрываем текущую активность, чтобы нельзя было вернуться назад
+				finish(); 
 			}
 		}, SPLASH_DELAY);
 		
