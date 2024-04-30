@@ -104,10 +104,10 @@ package com.example.myapplication;
 					email = emailedt.getText().toString().trim();
 					password = passwordedt.getText().toString().trim();
 					if (email.isEmpty()){
-						emailedt.setError("cannot");
+						emailedt.setError("Введите e-mail");
 					}
 					if (password.isEmpty()){
-						passwordedt.setError("pswd");
+						passwordedt.setError("Введите пароль");
 					}else{
 						auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener (new OnCompleteListener<AuthResult>(){
 							@Override

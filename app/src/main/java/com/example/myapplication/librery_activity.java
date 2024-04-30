@@ -57,6 +57,7 @@ public class librery_activity extends Activity {
 	private View _bg__group_17_ek1;
 	private View rectangle_11;
 	private View rectangle_12;
+	private ImageButton navigation_page1,navigation_page2, navigation_page4;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -64,9 +65,10 @@ public class librery_activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.librery);
 		Button book_note_button = findViewById(R.id.book_note_button);
-		ImageButton navigation_page1 = findViewById(R.id.navigation_page1);
-		ImageButton navigation_page2 = findViewById(R.id.navigation_page2);
-		ImageButton navigation_page4 = findViewById(R.id.navigation_page4);
+		navigation_page1 = findViewById(R.id.navigation_page1);
+		navigation_page2 = findViewById(R.id.navigation_page2);
+		navigation_page4 = findViewById(R.id.navigation_page4);
+
 
 		
 
@@ -95,6 +97,7 @@ public class librery_activity extends Activity {
 	
 		
 		//custom code goes here
+
 
 		book_note_button.setOnClickListener(new View.OnClickListener() {
 			@Override

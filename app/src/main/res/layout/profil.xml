@@ -56,15 +56,17 @@
 				android:alpha="0.5"
 				android:background="@drawable/rectangle_19_shape" />
 
-			<TextView
-				android:id="@+id/___________________"
+			<EditText
+				android:id="@+id/aboutme"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_alignStart="@+id/rectangle_19"
 				android:layout_alignTop="@+id/rectangle_19"
-				android:layout_marginStart="15dp"
-				android:layout_marginTop="15dp"
-				android:text="Сын маминой подруги"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="9dp"
+				android:layout_marginEnd="20dp"
+				android:hint="Обо мне"
+				android:maxLength="60"
 				android:textColor="@color/____________________color"
 				android:textSize="12sp" />
 
@@ -140,6 +142,22 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<TextView
+		android:id="@+id/exitButt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:focusable="true"
+		android:onClick="onTextViewClick"
+		android:layout_marginTop="10dp"
+		android:padding="15dp"
+		android:text="Выход"
+		android:textColor="@color/_________________________color"
+		android:textSize="15sp"
+		app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+		app:layout_constraintTop_toTopOf="parent" />
+
+
+	<TextView
 		android:id="@+id/____________________"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -151,16 +169,27 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<ImageView
+	<ImageButton
 		android:id="@+id/sozdaticon"
-		android:layout_width="wrap_content"
+		android:background="@android:color/transparent"
+		android:layout_width="0dp"
 		android:layout_height="match_parent"
+		android:layout_marginEnd="22dp"
+		android:layout_marginTop="24dp"
 		android:src="@drawable/sozdat"
-		android:layout_marginTop="20dp"
-		android:layout_marginEnd="60dp"
+		app:layout_constraintEnd_toStartOf="@+id/exitButt"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageButton
+		android:id="@+id/plus"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:background="@android:color/transparent"
+		android:layout_marginEnd="10dp"
+		android:layout_marginBottom = "10dp"
+		app:layout_constraintBottom_toTopOf="@+id/navigation_linear_layout"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		/>
+		android:src="@drawable/plus" />
 
 	<LinearLayout
 		android:id="@+id/navigation_linear_layout"

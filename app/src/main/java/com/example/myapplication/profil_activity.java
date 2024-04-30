@@ -17,15 +17,15 @@
 
 package com.example.myapplication;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
+	import android.app.Activity;
+	import android.content.Intent;
+	import android.os.Bundle;
+	import android.view.View;
+	import android.widget.ImageButton;
+	import android.widget.ImageView;
+	import android.widget.TextView;
 
-
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
+	import com.google.firebase.auth.FirebaseAuth;
 
 public class profil_activity extends Activity {
 
@@ -49,38 +49,43 @@ public class profil_activity extends Activity {
 	private TextView ________;
 	private View rectangle_21;
 	private TextView _________ek1;
+	private TextView exitButt;
+	private FirebaseAuth auth;
+	private ImageButton sozdaticon;
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.profil);
+
 		ImageButton navigation_page1 = findViewById(R.id.navigation_page1);
 		ImageButton navigation_page3 = findViewById(R.id.navigation_page3);
 		ImageButton navigation_page4 = findViewById(R.id.navigation_page4);
-
-		
-
-		_bg________ek1 = (View) findViewById(R.id._bg________ek1);
-		rectangle_2 = (View) findViewById(R.id.rectangle_2);
-		rectangle_1 = (View) findViewById(R.id.rectangle_1);
-
-		rectangle_9 = (View) findViewById(R.id.rectangle_9);
+		exitButt = findViewById(R.id.exitButt);
+		auth = FirebaseAuth.getInstance();
+		sozdaticon = findViewById(R.id.sozdaticon);
 
 
-		rectangle_17 = (ImageView) findViewById(R.id.rectangle_17);
-		rectangle_18 = (ImageView) findViewById(R.id.rectangle_18);
-		line_1 = (ImageView) findViewById(R.id.line_1);
-
-		rectangle_19 = (View) findViewById(R.id.rectangle_19);
-		___________________ = (TextView) findViewById(R.id.___________________);
-		______ = (TextView) findViewById(R.id.______);
-		________ = (TextView) findViewById(R.id.________);
-		rectangle_21 = (View) findViewById(R.id.rectangle_21);
-		_________ek1 = (TextView) findViewById(R.id._________ek1);
-	
-		
 		//custom code goes here
+		sozdaticon.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(profil_activity.this, change_activity.class));
+				finish();
+			}
+		});
+		exitButt.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				auth.signOut();
+				startActivity(new Intent(profil_activity.this, ____________activity.class));
+				finish();
+			}
+		}); {
+
+		}
 		navigation_page1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
