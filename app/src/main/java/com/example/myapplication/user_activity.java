@@ -22,6 +22,7 @@ import android.os.Bundle;
 
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
 
@@ -54,30 +55,49 @@ public class user_activity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.user);
+		Button recnz = findViewById(R.id.recenz);
+		Button citata = findViewById(R.id.citata);
+		Button selection =findViewById(R.id.selection);
 
-		
-
-		_bg________ek1 = (View) findViewById(R.id._bg________ek1);
-		rectangle_2 = (View) findViewById(R.id.rectangle_2);
-		rectangle_1 = (View) findViewById(R.id.rectangle_1);
-
-		rectangle_17 = (ImageView) findViewById(R.id.rectangle_17);
-		rectangle_18 = (ImageView) findViewById(R.id.rectangle_18);
-		line_1 = (ImageView) findViewById(R.id.line_1);
-
-		rectangle_19 = (View) findViewById(R.id.rectangle_19);
-		________ = (TextView) findViewById(R.id.________);
-		_________ek1 = (TextView) findViewById(R.id._________ek1);
-
-
-		______ = (TextView) findViewById(R.id.______);
-		rectangle_20 = (View) findViewById(R.id.rectangle_20);
-		___________________ = (TextView) findViewById(R.id.___________________);
-	
-		
 		//custom code goes here
-	
+
+		selection.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				selectTab2();
+			}
+		});
+		citata.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				selectTab3();
+			}
+		});
+		recnz.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				selectTab1();
+			}
+		});
 	}
+	private void selectTab1() {
+		findViewById(R.id.tab1Content).setVisibility(View.VISIBLE);
+		findViewById(R.id.tab2Content).setVisibility(View.GONE);
+		findViewById(R.id.tab3Content).setVisibility(View.GONE);
+	}
+
+	private void selectTab2() {
+		findViewById(R.id.tab1Content).setVisibility(View.GONE);
+		findViewById(R.id.tab2Content).setVisibility(View.VISIBLE);
+		findViewById(R.id.tab3Content).setVisibility(View.GONE);
+	}
+
+	private void selectTab3() {
+		findViewById(R.id.tab3Content).setVisibility(View.VISIBLE);
+		findViewById(R.id.tab2Content).setVisibility(View.GONE);
+		findViewById(R.id.tab1Content).setVisibility(View.GONE);
+	}
+
 }
 	
 	

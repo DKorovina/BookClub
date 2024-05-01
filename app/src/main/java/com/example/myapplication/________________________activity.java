@@ -20,6 +20,8 @@ package com.example.myapplication;
 	import android.app.Activity;
 	import android.content.Intent;
 	import android.os.Bundle;
+	import android.text.TextUtils;
+	import android.util.Log;
 	import android.view.View;
 	import android.widget.Button;
 	import android.widget.EditText;
@@ -30,9 +32,17 @@ package com.example.myapplication;
 	import androidx.annotation.NonNull;
 
 	import com.google.android.gms.tasks.OnCompleteListener;
+	import com.google.android.gms.tasks.OnFailureListener;
+	import com.google.android.gms.tasks.OnSuccessListener;
 	import com.google.android.gms.tasks.Task;
 	import com.google.firebase.auth.AuthResult;
 	import com.google.firebase.auth.FirebaseAuth;
+	import com.google.firebase.auth.FirebaseUser;
+	import com.google.firebase.firestore.DocumentReference;
+	import com.google.firebase.firestore.FirebaseFirestore;
+
+	import java.util.HashMap;
+	import java.util.Map;
 
 
 	public class ________________________activity extends Activity {
@@ -73,9 +83,9 @@ package com.example.myapplication;
 		private TextView _______________;
 		private TextView _________________;
 		private TextView _______;
-		private EditText emailedt, passwordedt;
+		private EditText emailedt, passwordedt, usernameedt;
 		private String email, password;
-
+		private FirebaseUser user;
 		private FirebaseAuth auth;
 
 
@@ -90,6 +100,10 @@ package com.example.myapplication;
 			Button button = findViewById(R.id.button);
 			EditText passwordedt = findViewById(R.id.pswd);
 			EditText emailedt = findViewById(R.id.phone_number);
+			EditText usernameedt = findViewById(R.id.usernameedt);
+
+
+
 
 
 			___________ = (TextView) findViewById(R.id.___________);
@@ -114,6 +128,8 @@ package com.example.myapplication;
 							public void onComplete(@NonNull Task<AuthResult> task) {
 								if (task.isSuccessful()) {
 									Toast.makeText(________________________activity.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
+									String username = usernameedt.getText().toString().trim();
+									saveUsernameToFirestore(username);
 									startActivity(new Intent(________________________activity.this, ____________activity.class));
 								} else {
 									Toast.makeText(________________________activity.this, "SignUp Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -121,10 +137,57 @@ package com.example.myapplication;
 							}
 						});
 
+
 					}
 				}
 			});
 
+		}
+		private void saveUsernameToFirestore(String username) {
+			FirebaseAuth auth = FirebaseAuth.getInstance();
+			FirebaseUser user = auth.getCurrentUser();
+
+			if (user != null) {
+
+				String uid = user.getUid();
+
+
+				FirebaseFirestore db = FirebaseFirestore.getInstance();
+				DocumentReference userRef = db.collection("users").document(uid);
+
+				Map<String, Object> userData = new HashMap<>();
+				userData.put("username", username);
+				if (userData != null) {
+					userRef.set(userData)
+
+							.addOnSuccessListener(new OnSuccessListener<Void>() {
+								@Override
+								public void onSuccess(Void aVoid) {
+									Log.d("Firestore", "Username successfully saved to Firestore!");
+								}
+							})
+							.addOnFailureListener(new OnFailureListener() {
+								@Override
+								public void onFailure(@NonNull Exception e) {
+									Log.w("Firestore", "Error saving username to Firestore", e);
+								}
+							});
+
+				} else {
+					Log.e("Firestore", "userData is null, unable to save to Firestore");
+				}
+				if (userData.containsKey("username") && !TextUtils.isEmpty(userData.get("username").toString())) {
+					// Продолжайте с сохранением данных в Firestore
+				} else {
+					Log.e("Firestore", "Field 'username' is missing or empty in userData, unable to save to Firestore");
+				}
+				Log.d("Firestore", "userData: " + userData.toString());
+
+
+
+
+
+			}
 		}
 
 	}

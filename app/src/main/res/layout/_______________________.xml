@@ -28,7 +28,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Регистрация"
-		android:textColor="@color/ellipse_2_color"
+		android:textColor="@color/gray"
 		android:textSize="28sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
 
 
 	<EditText
-		android:id="@+id/username"
+		android:id="@+id/usernameedt"
 		android:layout_width="0dp"
 		android:layout_height="37dp"
 		android:layout_marginStart="30dp"
@@ -84,7 +84,7 @@
 		android:layout_marginTop="25dp"
 		android:background="@drawable/rectangle_16_shape"
 		android:text="Вход"
-		android:textColor="@color/_____color"
+		android:textColor="@color/main_dark"
 		android:textSize="16sp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
 		android:layout_marginStart="35dp"
 		android:layout_marginTop="16dp"
 		android:text="Номер телефона:"
-		android:textColor="@color/ellipse_2_color"
+		android:textColor="@color/gray"
 		android:textSize="11sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
@@ -111,12 +111,12 @@
 		android:layout_marginStart="35dp"
 		android:layout_marginTop="16dp"
 		android:text="Имя пользователя:"
-		android:textColor="@color/ellipse_2_color"
+		android:textColor="@color/gray"
 		android:textSize="11sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintBottom_toTopOf="@id/username" />
+		app:layout_constraintBottom_toTopOf="@id/usernameedt" />
 
 	<TextView
 		android:id="@+id/_______"
@@ -125,7 +125,7 @@
 		android:layout_marginStart="35dp"
 		android:layout_marginTop="16dp"
 		android:text="Пароль:"
-		android:textColor="@color/ellipse_2_color"
+		android:textColor="@color/gray"
 		android:textSize="11sp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.5"

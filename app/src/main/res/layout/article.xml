@@ -59,7 +59,7 @@
 				android:layout_marginEnd="15dp"
 				android:layout_toEndOf="@+id/image_1"
 				android:text="Гарри Поттер учится балету с Малфоем "
-				android:textColor="@color/_____________________________________color"
+				android:textColor="@color/gray"
 				android:textSize="14sp" />
 
 			<LinearLayout
@@ -79,7 +79,7 @@
 					android:layout_marginTop="15dp"
 					android:layout_weight="1"
 					android:text="Оценка: 3000"
-					android:textColor="@color/_bg________ek1_color"
+					android:textColor="@color/black"
 					android:textSize="15sp" />
 
 				<TextView
@@ -89,7 +89,7 @@
 					android:layout_marginTop="15dp"
 					android:layout_weight="1"
 					android:text="Прочитало: 3000"
-					android:textColor="@color/_bg________ek1_color"
+					android:textColor="@color/black"
 					android:textSize="15sp" />
 			</LinearLayout>
 
@@ -110,7 +110,7 @@
 				android:layout_marginLeft="25dp"
 				android:layout_marginTop="15dp"
 				android:text="20.03.2024"
-				android:textColor="@color/_____________________________________color"
+				android:textColor="@color/gray"
 				android:textSize="15sp" />
 
 			<TextView
@@ -123,7 +123,7 @@
 				android:layout_marginTop="15dp"
 				android:layout_marginEnd="15dp"
 				android:text="Вчера Гарри Поттер и Драко Малфой раскрыли свой секрет. Кто бы знал, что они такие!!! Тра-ля-ля, бла-бла-блаg"
-				android:textColor="@color/_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________500_000_________________________________________________________________________________________________________________________________________color"
+				android:textColor="@color/text"
 				android:textSize="12sp" />
 
 		</RelativeLayout>
@@ -146,7 +146,7 @@
 		android:layout_marginTop="9dp"
 		android:background="@drawable/rectangle_16_shape"
 		android:text="Лайк"
-		android:textColor="@color/______ek2_color"
+		android:textColor="@color/gray"
 		android:textSize="13sp"
 		app:layout_constraintStart_toStartOf="@+id/rectangle_1"
 		app:layout_constraintTop_toTopOf="@+id/_bg__article" />
@@ -156,7 +156,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="68dp"
 		android:layout_alignParentBottom="true"
-		android:background="@color/_bg______________color"
+		android:background="@color/main"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent">
 

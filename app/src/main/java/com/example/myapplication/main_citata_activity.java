@@ -74,18 +74,6 @@ package com.example.myapplication;
         Button recnz = findViewById(R.id.recnz);
 
 
-        _bg__main = (View) findViewById(R.id._bg__main);
-        ___________________________________________________________________________________________________________________________ = (TextView) findViewById(R.id.___________________________________________________________________________________________________________________________);
-        ____________________________________ = (TextView) findViewById(R.id.____________________________________);
-        _3333_______ = (TextView) findViewById(R.id._3333_______);
-        image_1 = (ImageView) findViewById(R.id.image_1);
-        ____________________________________________________________________________________________________________ = (TextView) findViewById(R.id.____________________________________________________________________________________________________________);
-        _bg________ek1 = (View) findViewById(R.id._bg________ek1);
-        rectangle_2 = (View) findViewById(R.id.rectangle_2);
-        rectangle_1 = (View) findViewById(R.id.rectangle_1);
-        _______ = (TextView) findViewById(R.id._______);
-        ______ = (TextView) findViewById(R.id.______);
-        ________ = (TextView) findViewById(R.id.________);
 
 
 

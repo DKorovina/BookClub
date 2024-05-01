@@ -48,7 +48,7 @@
 				android:layout_marginTop="15dp"
 				android:layout_toEndOf="@+id/rectangle_23"
 				android:text="Шолох. Теневые блики"
-				android:textColor="@color/______ek2_color"
+				android:textColor="@color/gray"
 				android:textSize="18sp" />
 
 			<TextView
@@ -60,7 +60,7 @@
 				android:layout_marginTop="10dp"
 				android:layout_toEndOf="@+id/rectangle_23"
 				android:text="Антонина Крейн"
-				android:textColor="@color/______ek2_color"
+				android:textColor="@color/gray"
 				android:textSize="14sp" />
 
 			<View
@@ -72,7 +72,7 @@
 				android:layout_marginTop="30dp"
 				android:layout_marginEnd="15dp"
 				android:layout_toEndOf="@+id/rectangle_23"
-			android:background="@color/_bg________ekcolor" />
+			android:background="@color/light" />
 			<View
 				android:id="@+id/lne3"
 				android:layout_width="match_parent"
@@ -82,7 +82,7 @@
 				android:layout_marginTop="30dp"
 				android:layout_marginEnd="134dp"
 				android:layout_toEndOf="@+id/rectangle_23"
-				android:background="@color/_________________________color" />
+				android:background="@color/vinous" />
 
 			<TextView
 				android:id="@+id/_50_"
@@ -94,7 +94,7 @@
 				android:layout_marginEnd="30dp"
 				android:layout_marginBottom="10dp"
 				android:text="50%"
-				android:textColor="@color/______ek2_color"
+				android:textColor="@color/gray"
 				android:textSize="14sp" />
 
 			</RelativeLayout>
@@ -107,7 +107,7 @@
 				android:layout_marginTop="10dp"
 				android:background="@null"
 				android:onClick="selectTab1"
-				android:textColor="@color/______ek2_color"
+				android:textColor="@color/gray"
 				android:text="Книги" />
 
 			<Button
@@ -121,7 +121,7 @@
 				android:background="@null"
 				android:onClick="selectTab2"
 				android:text="Полки"
-				android:textColor="@color/______ek2_color" />
+				android:textColor="@color/gray" />
 
 			<View
 				android:id="@+id/lne4"
@@ -129,7 +129,7 @@
 				android:layout_height="2dp"
 				android:layout_below="@+id/topHalfLayout"
 				android:layout_marginTop="50dp"
-				android:background="@color/_____________________color" />
+				android:background="@color/gray" />
 
 			<FrameLayout
 				android:id="@+id/bottomHalfContainer"
@@ -173,7 +173,7 @@
 						android:layout_marginTop="10dp"
 						android:layout_toEndOf="@+id/rectangle_24"
 						android:text="Шолох. Теневые блики"
-						android:textColor="@color/rectangle_2_color"
+						android:textColor="@color/text"
 						android:textSize="18sp" />
 
 					<TextView
@@ -185,7 +185,7 @@
 						android:layout_marginTop="8dp"
 						android:layout_toEndOf="@+id/rectangle_24"
 						android:text="Антонина Крейн"
-						android:textColor="@color/_______________ek1_color"
+						android:textColor="@color/text"
 						android:textSize="14sp" />
 
 					<View
@@ -198,7 +198,7 @@
 						android:layout_marginTop="30dp"
 						android:layout_marginEnd="10dp"
 						android:layout_toEndOf="@+id/rectangle_24"
-						android:background="@color/_bg________ekcolor" />
+						android:background="@color/light" />
 					<View
 						android:id="@+id/lne6"
 						android:layout_width="match_parent"
@@ -208,7 +208,7 @@
 						android:layout_marginTop="30dp"
 						android:layout_marginEnd="134dp"
 						android:layout_toEndOf="@+id/rectangle_24"
-						android:background="@color/_________________________color" />
+						android:background="@color/vinous" />
 
 					<TextView
 						android:id="@+id/_50"
@@ -220,7 +220,7 @@
 						android:layout_marginEnd="30dp"
 						android:layout_marginBottom="10dp"
 						android:text="50%"
-						android:textColor="@color/______ek2_color"
+						android:textColor="@color/gray"
 						android:textSize="14sp" />
 				</RelativeLayout>
 
@@ -261,7 +261,7 @@
 							android:layout_marginTop="10dp"
 							android:layout_toEndOf="@+id/rectangle_242"
 							android:text="Шолох. Теневые блики"
-							android:textColor="@color/rectangle_2_color"
+							android:textColor="@color/text"
 							android:textSize="18sp" />
 
 				</RelativeLayout>
@@ -299,7 +299,7 @@
 		android:layout_marginTop="10dp"
 		android:background="@drawable/rectangle_16_shape"
 		android:text="Читательский дневник"
-		android:textColor="@color/______ek2_color"
+		android:textColor="@color/gray"
 		android:textSize="14sp"
 		app:layout_constraintStart_toStartOf="@+id/rectangle_1"
 		app:layout_constraintTop_toTopOf="@+id/_bg__book_note" />
@@ -309,7 +309,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="68dp"
 		android:layout_alignParentBottom="true"
-		android:background="@color/_bg______________color"
+		android:background="@color/main"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent">
 

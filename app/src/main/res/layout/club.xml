@@ -54,7 +54,7 @@
 				android:layout_marginStart="15dp"
 				android:layout_marginTop="15dp"
 				android:text="Информация о клубе"
-				android:textColor="@color/rectangle_2_color"
+				android:textColor="@color/text"
 				android:textSize="15sp" />
 
 			<ImageView
@@ -74,7 +74,7 @@
 				android:layout_marginLeft="15dp"
 				android:layout_marginTop="15dp"
 				android:text="Материалы добавленные в тезис во время опсуждений"
-				android:textColor="@color/rectangle_2_color"
+				android:textColor="@color/text"
 				android:textSize="15sp" />
 		</RelativeLayout>
 	</ScrollView>
@@ -94,7 +94,7 @@
 		android:layout_marginStart="30dp"
 		android:layout_marginTop="22dp"
 		android:text="Дарк академии"
-		android:textColor="@color/_____________________color"
+		android:textColor="@color/gray"
 		android:textSize="18sp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
@@ -124,7 +124,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="68dp"
 		android:layout_alignParentBottom="true"
-		android:background="@color/_bg______________color"
+		android:background="@color/main"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent">
 

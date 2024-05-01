@@ -48,7 +48,7 @@
 				android:background="@drawable/rectangle_16_shape"
 				android:text="Выбрать фото"
 				android:textSize="13sp"
-				android:textColor="@color/_____color"
+				android:textColor="@color/main_dark"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/rectangle_23" />
 
@@ -274,7 +274,7 @@
 		android:layout_marginStart="30dp"
 		android:layout_marginTop="22dp"
 		android:text="Читательский дневник"
-		android:textColor="@color/_____________________color"
+		android:textColor="@color/gray"
 		android:textSize="18sp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
@@ -295,7 +295,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="68dp"
 		android:layout_alignParentBottom="true"
-		android:background="@color/_bg______________color"
+		android:background="@color/main"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent">
 

@@ -11,11 +11,14 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".search_activity"
+            android:exported="false" />
+        <activity
             android:name=".change_activity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".reader_activity"
             android:configChanges="orientation|keyboardHidden|screenSize"

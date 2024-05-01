@@ -74,30 +74,7 @@ public class book_note_activity extends Activity {
 		setContentView(R.layout.book_note);
 
 		
-		_bg__book_note = (View) findViewById(R.id._bg__book_note);
-		_bg________ek1 = (View) findViewById(R.id._bg________ek1);
-		rectangle_2 = (View) findViewById(R.id.rectangle_2);
-		rectangle_1 = (View) findViewById(R.id.rectangle_1);
-		rectangle_23 = (ImageView) findViewById(R.id.rectangle_23);
-		______ = (TextView) findViewById(R.id.______);
-		_________ = (TextView) findViewById(R.id._________);
 
-		_________________ = (TextView) findViewById(R.id._________________);
-		________________ = (TextView) findViewById(R.id.________________);
-
-
-		______________ = (TextView) findViewById(R.id.______________);
-		__________ = (TextView) findViewById(R.id.__________);
-
-		_______________ek1 = (TextView) findViewById(R.id._______________ek1);
-
-
-
-		___________________ = (TextView) findViewById(R.id.___________________);
-		________ = (TextView) findViewById(R.id.________);
-		____________________ = (TextView) findViewById(R.id.____________________);
-
-		rectangle_9 = (View) findViewById(R.id.rectangle_9);
 
 
 

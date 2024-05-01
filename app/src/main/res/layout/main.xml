@@ -19,79 +19,234 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rectangle_1">
 
-        <RelativeLayout
-            android:id="@+id/content_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <View
-                android:id="@+id/rectangle_9"
+            <FrameLayout
+                android:id="@+id/bottomHalfContainer"
                 android:layout_width="match_parent"
-                android:layout_height="207dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:alpha="0.5"
-                android:background="@drawable/rectangle_21_shape" />
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/tab1Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
 
-            <ImageView
-                android:id="@+id/image_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/rectangle_9"
-                android:layout_alignEnd="@+id/rectangle_9"
-                android:layout_alignBottom="@+id/rectangle_9"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="23dp"
-                android:contentDescription="image_1"
-                android:src="@drawable/image_1" />
+                    <View
+                        android:id="@+id/rectangle_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="207dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:alpha="0.5"
+                        android:background="@drawable/rectangle_21_shape" />
 
-            <TextView
-                android:id="@+id/statia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/rectangle_9"
-                android:layout_alignTop="@+id/rectangle_9"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="15dp"
-                android:layout_toStartOf="@+id/image_1"
-                android:text="Гарри Поттер учится балету с Малфоем "
-                android:textColor="@color/_________________________color"
-                android:textSize="15sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="15dp"
-                android:onClick="onTextViewClick"/>
+                    <ImageView
+                        android:id="@+id/image_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rectangle_9"
+                        android:layout_alignEnd="@+id/rectangle_9"
+                        android:layout_alignBottom="@+id/rectangle_9"
+                        android:layout_marginTop="23dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="23dp"
+                        android:contentDescription="image_1"
+                        android:src="@drawable/image_1" />
 
-            <TextView
-                android:id="@+id/___________________________________________________________________________________________________________________________"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/statia"
-                android:layout_alignStart="@+id/rectangle_9"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="15dp"
-                android:layout_toStartOf="@+id/image_1"
-                android:text="Вчера Гарри Поттер и Драко Малфой раскрыли свой секрет. Кто бы знал, что они такие!!! Тра-ля-ля, бла-бла-бла, пу-пу-пуанты."
-                android:textColor="@color/____________________________________________________________________________________________________________________________color" />
+                    <TextView
+                        android:id="@+id/statia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/rectangle_9"
+                        android:layout_alignTop="@+id/rectangle_9"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/image_1"
+                        android:text="Гарри Поттер учится балету с Малфоем "
+                        android:textColor="@color/vinous"
+                        android:textSize="15sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="15dp"
+                        android:onClick="onTextViewClick"/>
 
-            <TextView
-                android:id="@+id/_3333_______"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/___________________________________________________________________________________________________________________________"
-                android:layout_alignStart="@+id/rectangle_9"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:text="3333 лайков"
-                android:textColor="@color/_3333________color"
-                android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/statia_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/statia"
+                        android:layout_alignStart="@+id/rectangle_9"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/image_1"
+                        android:text="Вчера Гарри Поттер и Драко Малфой раскрыли свой секрет. Кто бы знал, что они такие!!! Тра-ля-ля, бла-бла-бла, пу-пу-пуанты."
+                        android:textColor="@color/text" />
 
+                    <TextView
+                        android:id="@+id/statia_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/statia_text"
+                        android:layout_alignStart="@+id/rectangle_9"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="3333 лайков"
+                        android:textColor="@color/dark_green"
+                        android:textSize="14sp" />
 
-        </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab2Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/rectangle_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="207dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:alpha="0.5"
+                        android:background="@drawable/rectangle_21_shape" />
+
+                    <ImageView
+                        android:id="@+id/image_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rectangle_10"
+                        android:layout_alignEnd="@+id/rectangle_10"
+                        android:layout_alignBottom="@+id/rectangle_10"
+                        android:layout_marginTop="23dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="23dp"
+                        android:contentDescription="image_1"
+                        android:src="@drawable/image_1" />
+
+                    <TextView
+                        android:id="@+id/book_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/rectangle_10"
+                        android:layout_alignTop="@+id/rectangle_10"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/image_2"
+                        android:text="Шолох. Теневые блики "
+                        android:textColor="@color/vinous"
+                        android:textSize="15sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="15dp"
+                        android:onClick="onTextViewClick"/>
+
+                    <TextView
+                        android:id="@+id/citata_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_name"
+                        android:layout_alignStart="@+id/rectangle_10"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/image_2"
+                        android:text="Бокки с фанарями - духи блуждающие по Шолоху дважды в месяц."
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/citata_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/citata_text"
+                        android:layout_alignStart="@+id/rectangle_10"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="3333 лайков"
+                        android:textColor="@color/dark_green"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab3Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/rectangle_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="207dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:alpha="0.5"
+                        android:background="@drawable/rectangle_21_shape" />
+
+                    <ImageView
+                        android:id="@+id/image_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rectangle_11"
+                        android:layout_alignEnd="@+id/rectangle_11"
+                        android:layout_alignBottom="@+id/rectangle_11"
+                        android:layout_marginTop="23dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="23dp"
+                        android:contentDescription="image_1"
+                        android:src="@drawable/image_1" />
+
+                    <TextView
+                        android:id="@+id/book_name_rec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/rectangle_11"
+                        android:layout_alignTop="@+id/rectangle_11"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/image_3"
+                        android:text="Шолох. Теневые блики "
+                        android:textColor="@color/vinous"
+                        android:textSize="15sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="15dp"
+                        android:onClick="onTextViewClick"/>
+
+                    <TextView
+                        android:id="@+id/recenz_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_name_rec"
+                        android:layout_alignStart="@+id/rectangle_11"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/image_3"
+                        android:text="Прочитала Шолох. Теневые блики. Очень понравилось. Главная героиня, Тинави из дома Страждущих, просто изумительный персонаж."
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/recenz_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recenz_text"
+                        android:layout_alignStart="@+id/rectangle_11"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="3333 лайков"
+                        android:textColor="@color/dark_green"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </FrameLayout>
+
     </ScrollView>
 
     <View
@@ -121,8 +276,9 @@
             android:alpha="0.6"
             android:background="@null"
             android:text="Новости"
-            android:textColor="@color/_bg__main_color"
+            android:textColor="@color/white"
             android:textSize="15sp"
+            android:onClick="selectTab1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,8 +291,9 @@
             android:alpha="0.6"
             android:background="@null"
             android:text="Цитаты"
-            android:textColor="@color/_bg__main_color"
+            android:textColor="@color/white"
             android:textSize="15sp"
+            android:onClick="selectTab2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,8 +306,9 @@
             android:alpha="0.6"
             android:background="@null"
             android:text="Рецензии"
-            android:textColor="@color/_bg__main_color"
+            android:textColor="@color/white"
             android:textSize="15sp"
+            android:onClick="selectTab3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
@@ -165,13 +323,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="317dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Поиск"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/sourchicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/navigation_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/_bg______________color"
+        android:background="@color/main"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 

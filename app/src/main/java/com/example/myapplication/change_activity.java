@@ -14,7 +14,7 @@ public class change_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.change);
+        setContentView(R.layout.changed);
 
         button5 = findViewById(R.id.button5);
         back = findViewById(R.id.backprofil);
