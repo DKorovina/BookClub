@@ -50,6 +50,8 @@ public class user_activity extends Activity {
 	private View rectangle_20;
 	private TextView ___________________;
 
+
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -84,18 +86,42 @@ public class user_activity extends Activity {
 		findViewById(R.id.tab1Content).setVisibility(View.VISIBLE);
 		findViewById(R.id.tab2Content).setVisibility(View.GONE);
 		findViewById(R.id.tab3Content).setVisibility(View.GONE);
+
+		Button recenzButton = findViewById(R.id.recenz);
+		Button selectionButton = findViewById(R.id.selection);
+		Button citataButton = findViewById(R.id.citata);
+
+		recenzButton.setTextColor(getResources().getColor(R.color.vinous));
+		selectionButton.setTextColor(getResources().getColor(R.color.gray));
+		citataButton.setTextColor(getResources().getColor(R.color.gray));
 	}
 
 	private void selectTab2() {
 		findViewById(R.id.tab1Content).setVisibility(View.GONE);
 		findViewById(R.id.tab2Content).setVisibility(View.VISIBLE);
 		findViewById(R.id.tab3Content).setVisibility(View.GONE);
+
+		Button recenzButton = findViewById(R.id.recenz);
+		Button selectionButton = findViewById(R.id.selection);
+		Button citataButton = findViewById(R.id.citata);
+
+		recenzButton.setTextColor(getResources().getColor(R.color.gray));
+		selectionButton.setTextColor(getResources().getColor(R.color.vinous));
+		citataButton.setTextColor(getResources().getColor(R.color.gray));
 	}
 
 	private void selectTab3() {
 		findViewById(R.id.tab3Content).setVisibility(View.VISIBLE);
 		findViewById(R.id.tab2Content).setVisibility(View.GONE);
 		findViewById(R.id.tab1Content).setVisibility(View.GONE);
+
+		Button recenzButton = findViewById(R.id.recenz);
+		Button selectionButton = findViewById(R.id.selection);
+		Button citataButton = findViewById(R.id.citata);
+
+		recenzButton.setTextColor(getResources().getColor(R.color.gray));
+		selectionButton.setTextColor(getResources().getColor(R.color.gray));
+		citataButton.setTextColor(getResources().getColor(R.color.vinous));
 	}
 
 }

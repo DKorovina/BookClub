@@ -142,11 +142,25 @@ public class librery_activity extends Activity {
 	private void selectTab1() {
 		findViewById(R.id.tab1Content).setVisibility(View.VISIBLE);
 		findViewById(R.id.tab2Content).setVisibility(View.GONE);
+
+		Button tab1Button = findViewById(R.id.tab1_button);
+		Button tab2Button = findViewById(R.id.tab2_button);
+
+
+		tab1Button.setTextColor(getResources().getColor(R.color.vinous));
+		tab2Button.setTextColor(getResources().getColor(R.color.gray));
+
 	}
 
 	private void selectTab2() {
 		findViewById(R.id.tab1Content).setVisibility(View.GONE);
 		findViewById(R.id.tab2Content).setVisibility(View.VISIBLE);
+
+		Button tab1Button = findViewById(R.id.tab1_button);
+		Button tab2Button = findViewById(R.id.tab2_button);
+
+		tab1Button.setTextColor(getResources().getColor(R.color.gray));
+		tab2Button.setTextColor(getResources().getColor(R.color.vinous));
 	}
 
 }

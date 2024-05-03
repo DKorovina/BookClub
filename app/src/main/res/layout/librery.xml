@@ -107,7 +107,7 @@
 				android:layout_marginTop="10dp"
 				android:background="@null"
 				android:onClick="selectTab1"
-				android:textColor="@color/gray"
+				android:textColor="@color/vinous"
 				android:text="Книги" />
 
 			<Button

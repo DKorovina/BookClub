@@ -21,7 +21,9 @@
     import android.content.Context;
     import android.content.Intent;
     import android.os.Bundle;
+    import android.util.Log;
     import android.view.KeyEvent;
+    import android.view.MotionEvent;
     import android.view.View;
     import android.view.inputmethod.EditorInfo;
     import android.view.inputmethod.InputMethodManager;
@@ -29,9 +31,20 @@
     import android.widget.EditText;
     import android.widget.ImageButton;
     import android.widget.ImageView;
+    import android.widget.ListView;
     import android.widget.TextView;
 
+    import androidx.annotation.NonNull;
     import androidx.navigation.NavController;
+
+    import com.google.android.gms.tasks.OnCompleteListener;
+    import com.google.android.gms.tasks.Task;
+    import com.google.firebase.firestore.FirebaseFirestore;
+    import com.google.firebase.firestore.QueryDocumentSnapshot;
+    import com.google.firebase.firestore.QuerySnapshot;
+
+    import java.util.ArrayList;
+    import java.util.List;
 
 
     public class main_activity extends Activity {
@@ -69,6 +82,8 @@
         private View ellipse_10;
         private View rectangle_8;
         private NavController navController;
+        private EditText searchEditText;
+        private FirebaseFirestore db;
 
 
         @Override
@@ -84,38 +99,27 @@
             ImageButton navigation_page3 = findViewById((R.id.navigation_page3));
             ImageButton navigation_page4 = findViewById((R.id.navigation_page4));
             ImageView searchIcon = findViewById(R.id.sourchicon);
+            View rootView = findViewById(R.id.content);
+            searchEditText = findViewById(R.id.searchEditText);
+             db = FirebaseFirestore.getInstance();
 
+            rootView.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    hideKeyboardAndSearchEditText();
+                    return false;
+                }
+            });
 
             searchIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     openSearchDialog();
                 }
-
-                private void openSearchDialog() {
-                    // Находим поле ввода для поиска в макете
-                    EditText searchEditText = findViewById(R.id.searchEditText);
-                    // Устанавливаем видимость поля ввода при вызове метода
-                    searchEditText.setVisibility(View.VISIBLE);
-                    // Устанавливаем слушатель событий для поля ввода
-                    searchEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-                        @Override
-                        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                                // Получаем текст из поля EditText и выполняем поиск
-                                String searchText = v.getText().toString().trim();
-                                // Скрываем клавиатуру после завершения поиска
-                                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                                // Устанавливаем видимость поля ввода на GONE после завершения поиска
-                                v.setVisibility(View.GONE);
-                                return true;
-                            }
-                            return false;
-                        }
-                    });
-                }
             });
+
+
+
 			news.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -169,6 +173,54 @@
             });
         }
 
+        private void hideKeyboardAndSearchEditText() {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(searchEditText.getWindowToken(), 0);
+            searchEditText.setVisibility(View.GONE);
+        }
+        private void openSearchDialog() {
+            searchEditText.setVisibility(View.VISIBLE);
+
+            searchEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                        if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                            String searchText = v.getText().toString().trim();
+                            db.collection("Book")
+                                    .orderBy("book_name")
+                                    .startAt(searchText)
+                                    .endAt(searchText + "\uf8ff")
+                                    .get()
+                                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                List<Book> foundBooks = new ArrayList<>(); // Создаем список для хранения найденных книг
+                                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                                    Book book = document.toObject(Book.class);
+                                                    foundBooks.add(book);
+
+                                                }
+                                                ListView searchResultsListView = findViewById(R.id.searchResultsListView);
+                                                BookAdapter adapter = new BookAdapter(main_activity.this, foundBooks);
+                                                searchResultsListView.setAdapter(adapter);
+                                                searchResultsListView.setVisibility(View.VISIBLE);
+                                            } else {
+                                                Log.d("Error", "Error getting documents");
+
+                                            }
+                                        }
+                                    });
+                            // Скрываем клавиатуру после завершения поиска
+                            hideKeyboardAndSearchEditText();
+                            return true;
+                        }
+
+                        return false;
+                    }
+            });
+        }
+
         public void onTextViewClick(View v) {
             Intent intent = new Intent(main_activity.this, article_activity.class);
             startActivity(intent);
@@ -178,18 +230,43 @@
             findViewById(R.id.tab1Content).setVisibility(View.VISIBLE);
             findViewById(R.id.tab2Content).setVisibility(View.GONE);
             findViewById(R.id.tab3Content).setVisibility(View.GONE);
+
+            Button recenzButton = findViewById(R.id.recnz);
+            Button newsButton = findViewById(R.id.news);
+            Button citataButton = findViewById(R.id.citata);
+
+            recenzButton.setTextColor(getResources().getColor(R.color.gray));
+            newsButton.setTextColor(getResources().getColor(R.color.vinous));
+            citataButton.setTextColor(getResources().getColor(R.color.gray));
         }
 
         private void selectTab2() {
             findViewById(R.id.tab1Content).setVisibility(View.GONE);
             findViewById(R.id.tab2Content).setVisibility(View.VISIBLE);
             findViewById(R.id.tab3Content).setVisibility(View.GONE);
+
+            Button recenzButton = findViewById(R.id.recnz);
+            Button newsButton = findViewById(R.id.news);
+            Button citataButton = findViewById(R.id.citata);
+
+            recenzButton.setTextColor(getResources().getColor(R.color.gray));
+            newsButton.setTextColor(getResources().getColor(R.color.gray));
+            citataButton.setTextColor(getResources().getColor(R.color.vinous));
+
         }
 
         private void selectTab3() {
             findViewById(R.id.tab3Content).setVisibility(View.VISIBLE);
             findViewById(R.id.tab2Content).setVisibility(View.GONE);
             findViewById(R.id.tab1Content).setVisibility(View.GONE);
+
+            Button recenzButton = findViewById(R.id.recnz);
+            Button newsButton = findViewById(R.id.news);
+            Button citataButton = findViewById(R.id.citata);
+
+            recenzButton.setTextColor(getResources().getColor(R.color.vinous));
+            newsButton.setTextColor(getResources().getColor(R.color.gray));
+            citataButton.setTextColor(getResources().getColor(R.color.gray));
         }
 
     }

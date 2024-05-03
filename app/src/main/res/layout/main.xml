@@ -2,14 +2,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="wrap_content">
 
     <View
         android:id="@+id/_bg__main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/_bg__main_shape" />
 
+        android:background="@drawable/_bg__main_shape" />
+    <ListView
+        android:id="@+id/searchResultsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
     <ScrollView
         android:id="@+id/main"
         android:layout_width="0dp"
@@ -24,6 +30,8 @@
                 android:id="@+id/bottomHalfContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+
                 <RelativeLayout
                     android:id="@+id/tab1Content"
                     android:layout_width="match_parent"
@@ -243,11 +251,20 @@
                         android:text="3333 лайков"
                         android:textColor="@color/dark_green"
                         android:textSize="14sp" />
+
                 </RelativeLayout>
 
             </FrameLayout>
 
     </ScrollView>
+    <View
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
 
     <View
         android:id="@+id/rectangle_1"
@@ -273,10 +290,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_weight="1"
-            android:alpha="0.6"
             android:background="@null"
             android:text="Новости"
-            android:textColor="@color/white"
+            android:textColor="@color/vinous"
             android:textSize="15sp"
             android:onClick="selectTab1"
             app:layout_constraintStart_toStartOf="parent"
@@ -288,10 +304,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_weight="1"
-            android:alpha="0.6"
             android:background="@null"
             android:text="Цитаты"
-            android:textColor="@color/white"
+            android:textColor="@color/gray"
             android:textSize="15sp"
             android:onClick="selectTab2"
             app:layout_constraintStart_toStartOf="parent"
@@ -303,10 +318,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_weight="1"
-            android:alpha="0.6"
             android:background="@null"
             android:text="Рецензии"
-            android:textColor="@color/white"
+            android:textColor="@color/gray"
             android:textSize="15sp"
             android:onClick="selectTab3"
             app:layout_constraintStart_toStartOf="parent"

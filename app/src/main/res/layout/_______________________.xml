@@ -96,7 +96,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginStart="35dp"
 		android:layout_marginTop="16dp"
-		android:text="Номер телефона:"
+		android:text="Элекронная почта:"
 		android:textColor="@color/gray"
 		android:textSize="11sp"
 		app:layout_constraintEnd_toEndOf="parent"

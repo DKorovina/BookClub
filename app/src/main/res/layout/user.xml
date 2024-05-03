@@ -85,7 +85,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="18sp"
 					android:background="@null"
-					android:textColor="@color/gray"
+					android:textColor="@color/vinous"
 					android:onClick="selectTab1"
 					android:layout_weight="1"
 					android:text="Рецензии"
